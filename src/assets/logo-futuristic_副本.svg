@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#764ba2" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <g filter="url(#glow)">
+    <path d="M30,50 Q50,20 70,50 T110,50" fill="none" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round" />
+    <path d="M110,50 Q130,80 150,50" fill="none" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round" />
+    
+    <circle cx="30" cy="50" r="5" fill="#00f2fe" />
+    <circle cx="70" cy="50" r="5" fill="#4facfe" />
+    <circle cx="110" cy="50" r="5" fill="#764ba2" />
+    <circle cx="150" cy="50" r="5" fill="#00f2fe" />
+    
+    <text x="100" y="85" font-family="Arial" font-size="24" font-weight="bold" fill="url(#gradient)">56kr</text>
+  </g>
+</svg>

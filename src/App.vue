@@ -3,8 +3,7 @@
     <header>
       <div class="header-container">
         <div class="logo-container">
-          <img src="./assets/logo.svg" alt="56kr Logo" class="logo">
-          <span class="logo-text">56kr</span>
+          <img src="./assets/logo-modern.svg" alt="56 Logo" class="logo">
         </div>
         <nav>
           <div class="menu-toggle" @click="toggleMenu">
@@ -92,21 +91,21 @@ header {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   flex-wrap: nowrap;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
 }
 
 .logo {
-  height: 32px;
+  height: 48px;
   width: auto;
 }
 
@@ -189,26 +188,44 @@ nav a.router-link-exact-active {
     display: flex;
     order: 1;
     margin-left: auto;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
   
   .nav-links {
     position: fixed;
-    top: 80px;
-    right: 20px;
-    width: 280px;
-    max-height: 70vh;
+    top: 70px;
+    right: 10px;
+    width: 250px;
+    max-height: 75vh;
     background: rgba(26, 43, 60, 0.98);
+    backdrop-filter: blur(10px);
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     transform: translateX(120%);
     opacity: 0;
-    transition: all 0.3s ease-out;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     z-index: 100;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    gap: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    gap: 0.8rem;
     overflow-y: auto;
-    border-radius: 8px;
+    border-radius: 12px;
   }
   
   .nav-links.active {
@@ -221,18 +238,13 @@ nav a.router-link-exact-active {
     pointer-events: none;
   }
 
-  
-
-  .menu-toggle span {
-    transition: all 0.3s ease;
-    transform-origin: center;
-  }
-
   nav a {
     width: 85%;
     padding: 0.8rem;
-    margin: 0.3rem 0;
-    font-size: 0.95rem;
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -246,38 +258,64 @@ main {
 @media (max-width: 768px) {
   .header-container {
     flex-direction: row;
-    gap: 1rem;
-    padding: 0 1rem;
+    gap: 0.5rem;
+    padding: 0 0.8rem;
     flex-wrap: wrap;
   }
   
   .logo-container {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 1rem;
+    width: auto;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  
+  .logo {
+    height: 36px;
   }
   
   nav {
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
+    align-items: flex-end;
+    width: auto;
+    gap: 0;
+    padding: 0;
+  }
+  
+  .menu-toggle {
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .nav-links {
+    top: 70px;
+    right: 10px;
+    width: 250px;
+    max-height: 75vh;
+    padding: 1rem 0;
+    background: rgba(26, 43, 60, 0.98);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   }
   
   nav a {
     width: 85%;
-    padding: 1rem;
-    margin: 0.5rem 0;
+    padding: 0.8rem;
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.1);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
   
-  .search-box {
-    width: 100%;
-  }
-  
-  .search-box input {
-    width: 70%;
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
   }
 }
 </style>

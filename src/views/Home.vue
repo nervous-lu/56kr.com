@@ -176,7 +176,6 @@ export default {
 /* 精选内容区域 */
 .featured-section {
   padding: 40px 20px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -200,7 +199,7 @@ export default {
 
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
   margin: 0;
   padding: 0;

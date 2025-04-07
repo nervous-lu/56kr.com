@@ -1,9 +1,6 @@
 <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="120" height="40" rx="8" fill="url(#paint0_linear)"/>
-  <path d="M30 12L40 28H20L30 12Z" fill="white"/>
-  <path d="M50 12L60 28H40L50 12Z" fill="white"/>
-  <path d="M70 12L80 28H60L70 12Z" fill="white"/>
-  <path d="M90 12L100 28H80L90 12Z" fill="white"/>
+  <text x="60" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">56kr</text>
   <defs>
     <linearGradient id="paint0_linear" x1="0" y1="0" x2="120" y2="40" gradientUnits="userSpaceOnUse">
       <stop stop-color="#1A237E"/>

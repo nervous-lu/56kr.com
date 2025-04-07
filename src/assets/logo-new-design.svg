@@ -7,11 +7,11 @@
   <path d="M110 14H120V20H115V22.5H120V27.5H115V30H120V36H110V14Z" fill="white" filter="url(#shadow)"/>
   <defs>
     <linearGradient id="paint0_linear" x1="0" y1="0" x2="160" y2="48" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF4B2B"/>
-      <stop offset="1" stop-color="#FF416C"/>
+      <stop stopColor="#FF4B2B"/>
+      <stop offset="1" stopColor="#FF416C"/>
     </linearGradient>
     <filter id="shadow" x="-2" y="-2" width="164" height="52" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.3"/>
+      <feDropShadow dx="0" dy="1" stdDeviation="1" floodOpacity="0.3"/>
     </filter>
   </defs>
 </svg>
